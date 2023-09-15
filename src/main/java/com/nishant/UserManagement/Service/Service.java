@@ -43,7 +43,7 @@ public class Service {
     public String deleteUser(Long id) {
         if(repository.getUserMap().containsKey(id)){
             repository.getUserMap().remove(id);
-            return "Done";
+            return "User "+id+" removed";
         }
         return "Id not found";
     }
