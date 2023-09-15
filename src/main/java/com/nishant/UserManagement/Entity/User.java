@@ -36,7 +36,7 @@ public class User implements Mergeable<User> {
     }
 
     public void setAddress(Address address) {
-        this.address = this.address.merge(address);
+        this.address = address;
     }
 
     public void setUserName(String userName) {
@@ -60,7 +60,7 @@ public class User implements Mergeable<User> {
 
     @Override
     public User merge(User replace) {
-        this.setAddress(replace.getAddress()!=null?replace.getAddress():this.getAddress());
+        this.address.merge(replace.address);
         this.setName(replace.getName()!=null?replace.getName():this.getName());
         this.setUserName(replace.getUserName()!=null? replace.getUserName() : this.getUserName());
         this.setPhoneNumber(replace.getPhoneNumber()!=null? replace.getPhoneNumber() : this.getPhoneNumber());
