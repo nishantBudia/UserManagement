@@ -1,5 +1,7 @@
 package com.nishant.UserManagement.Entity;
 
+import org.springframework.lang.NonNull;
+
 public class Address implements Mergeable<Address> {
     public Address(String flatNumber, String street, String area, Integer zipcode, String country, String state) {
         this.flatNumber = flatNumber;
@@ -34,27 +36,27 @@ public class Address implements Mergeable<Address> {
         return state;
     }
 
-    public void setFlatNumber(String flatNumber) {
+    public void setFlatNumber(@NonNull String flatNumber) {
         this.flatNumber = flatNumber;
     }
 
-    public void setStreet(String street) {
+    public void setStreet(@NonNull String street) {
         this.street = street;
     }
 
-    public void setArea(String area) {
+    public void setArea(@NonNull String area) {
         this.area = area;
     }
 
-    public void setZipcode(Integer zipcode) {
+    public void setZipcode(@NonNull Integer zipcode) {
         this.zipcode = zipcode;
     }
 
-    public void setCountry(String country) {
+    public void setCountry(@NonNull String country) {
         this.country = country;
     }
 
-    public void setState(String state) {
+    public void setState(@NonNull String state) {
         this.state = state;
     }
 

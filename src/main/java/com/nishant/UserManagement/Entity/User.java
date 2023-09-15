@@ -1,7 +1,9 @@
 package com.nishant.UserManagement.Entity;
 
+import org.springframework.lang.NonNull;
+
 public class User implements Mergeable<User> {
-    public void setUserId(Long userId) {
+    public void setUserId(@NonNull Long userId) {
         this.userId = userId;
     }
 
@@ -31,19 +33,19 @@ public class User implements Mergeable<User> {
     private String userName;
     private String phoneNumber;
 
-    public void setName(String name) {
+    public void setName(@NonNull String name) {
         this.name = name;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(@NonNull Address address) {
         this.address = address;
     }
 
-    public void setUserName(String userName) {
+    public void setUserName(@NonNull String userName) {
         this.userName = userName;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(@NonNull String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
