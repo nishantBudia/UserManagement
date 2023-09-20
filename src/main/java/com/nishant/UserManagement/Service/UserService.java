@@ -3,12 +3,11 @@ package com.nishant.UserManagement.Service;
 import com.nishant.UserManagement.Entity.User;
 import com.nishant.UserManagement.Repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.HashMap;
 
 @org.springframework.stereotype.Service
-public class Service {
+public class UserService {
 
     @Autowired
     Repository repository;
