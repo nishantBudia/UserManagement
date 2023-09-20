@@ -2,6 +2,11 @@ package com.nishant.UserManagement.Entity;
 
 import org.springframework.lang.NonNull;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class User implements Mergeable<User> {
     public void setUserId(@NonNull Long userId) {
         this.userId = userId;
@@ -32,6 +37,11 @@ public class User implements Mergeable<User> {
     private Address address;
     private String userName;
     private String phoneNumber;
+    private final HashMap<String,Integer> hits = new HashMap<>();
+
+    public HashMap<String, Integer> getHits() {
+        return hits;
+    }
 
     public void setName(@NonNull String name) {
         this.name = name;
